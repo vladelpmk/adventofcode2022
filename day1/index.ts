@@ -1,5 +1,4 @@
 import "../utils/array";
-import { DESC } from "../utils/const";
 import { readFile } from "../utils/file";
 
 const calories = readFile("input.txt")
