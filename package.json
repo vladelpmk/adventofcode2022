@@ -1,0 +1,18 @@
+{
+  "name": "adventofcode2022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "day": "cd $DAY && npx ts-node index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.11.10",
+    "fs": "^0.0.1-security",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3"
+  }
+}
