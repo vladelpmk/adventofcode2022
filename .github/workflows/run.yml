@@ -1,0 +1,15 @@
+name: Run advent of code
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm i
+      - run: DAY=day1 npm run day
+        continue-on-error: true
