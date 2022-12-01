@@ -1,0 +1,17 @@
+name: Run all days
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm i
+      - run: DAY=day1 npm run day
+        continue-on-error: true
