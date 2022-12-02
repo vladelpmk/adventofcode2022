@@ -10,19 +10,19 @@ const gameScore1 = (game: String): number => {
       case "A Y":
         return 8;
       case "A Z":
-       return 3;
+        return 3;
       case "B X":
         return 1;
       case "B Y":
         return 5;
       case "B Z":
-       return 9;
+        return 9;
       case "C X":
-       return 7;
+        return 7;
       case "C Y":
-       return 2;
+        return 2;
       case "C Z":
-       return 6;
+        return 6;
     }
     return 0;
 };
