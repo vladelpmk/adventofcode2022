@@ -1,3 +1,5 @@
-import { PathOrFileDescriptor, readFileSync } from "fs"
+import { PathOrFileDescriptor, readFileSync } from 'fs';
 
-export const readFile = (fileName: String): String => readFileSync(fileName as PathOrFileDescriptor).toString("utf-8");
+export const readFile = (fileName: string): string => readFileSync(fileName as PathOrFileDescriptor).toString('utf-8');
+
+export const readLines = (fileName: string): Array<string> => readFile(fileName).split('\n');

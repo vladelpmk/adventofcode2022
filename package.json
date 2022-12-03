@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "day": "cd $DAY && npx ts-node index.ts"
+    "day": "cd $DAY && npx ts-node index.ts",
+    "prettier-format": "prettier --config .prettierrc './**/*.ts' --write"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +15,8 @@
     "fs": "^0.0.1-security",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.0"
   }
 }
