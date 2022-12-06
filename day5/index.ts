@@ -1,4 +1,3 @@
-import '../utils/array';
 import { readFile } from '../utils/file';
 
 const file = readFile('input.txt');
