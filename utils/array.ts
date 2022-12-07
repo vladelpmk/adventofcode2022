@@ -1,7 +1,7 @@
 declare interface Array<T> {
   sum(this: Array<number>): number;
   max(this: Array<number>): number;
-  sortNumbers(this: Array<number>): Array<number>;
+  sortNumbers(this: Array<number>, direction?: 'ASC' | 'DSC'): Array<number>;
   unique(this: Array<any>): Array<any>;
   intersect(this: Array<any>, array: Array<any>): Array<any>;
 }
@@ -19,8 +19,15 @@ Object.defineProperty(Array.prototype, 'max', {
 });
 
 Object.defineProperty(Array.prototype, 'sortNumbers', {
-  value: function (this: Array<number>): Array<number> {
-    return this.sort((a, b) => b - a);
+  value: function (this: Array<number>, direction = 'ASC'): Array<number> {
+    return this.sort((a, b) => {
+      switch (direction) {
+        case 'ASC':
+          return b - a;
+        case 'DSC':
+          return a - b;
+      }
+    });
   }
 });
 
