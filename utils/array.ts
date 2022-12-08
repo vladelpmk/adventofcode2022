@@ -1,5 +1,6 @@
 declare interface Array<T> {
   sum(this: Array<number>): number;
+  multiply(this: Array<number>): number;
   max(this: Array<number>): number;
   sortNumbers(this: Array<number>, direction?: 'ASC' | 'DSC'): Array<number>;
   unique(this: Array<any>): Array<any>;
@@ -9,6 +10,12 @@ declare interface Array<T> {
 Object.defineProperty(Array.prototype, 'sum', {
   value: function (this: Array<number>): number {
     return this.reduce((acc, now) => acc + now, 0);
+  }
+});
+
+Object.defineProperty(Array.prototype, 'multiply', {
+  value: function (this: Array<number>): number {
+    return this.reduce((acc, now) => acc * now, 1);
   }
 });
 

@@ -25,3 +25,5 @@ jobs:
         continue-on-error: true
       - run: DAY=day7 npm run day
         continue-on-error: true
+      - run: DAY=day8 npm run day
+        continue-on-error: true
