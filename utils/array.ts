@@ -40,7 +40,7 @@ Object.defineProperty(Array.prototype, 'sortNumbers', {
 
 Object.defineProperty(Array.prototype, 'unique', {
   value: function (this: Array<any>): Array<any> {
-    return this.filter((value, index, self) => self.indexOf(value) === index);
+    return this.map((i) => JSON.stringify(i)).filter((value, index, self) => self.indexOf(value) === index);
   }
 });
 
