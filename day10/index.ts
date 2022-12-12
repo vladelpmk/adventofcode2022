@@ -1,4 +1,3 @@
-import '../utils/array';
 import { readLines } from '../utils/file';
 
 const instructions = readLines('input.txt');
